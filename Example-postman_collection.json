@@ -1,0 +1,345 @@
+{
+	"info": {
+		"_postman_id": "02fc1ed4-336e-4d71-8af6-762144e941ea",
+		"name": "HW_POSTMAN_KOTENKO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21517995"
+	},
+	"item": [
+		{
+			"name": "CREATE_POST",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "Token {{Token_Login}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "text",
+							"value": "Test text 111",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{Base_URL_1}}/wall/post/",
+					"host": [
+						"{{Base_URL_1}}"
+					],
+					"path": [
+						"wall",
+						"post",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE_POST",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "Token {{Token_Login}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "text",
+							"value": "Test text 222",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{Base_URL_1}}/wall/post/{{Post ID}}/",
+					"host": [
+						"{{Base_URL_1}}"
+					],
+					"path": [
+						"wall",
+						"post",
+						"{{Post ID}}",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_POST",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "Token {{Token_Login}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "text",
+							"value": "Test text 222",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{Base_URL_1}} /wall/post/{{Post ID}}/",
+					"host": [
+						"{{Base_URL_1}} "
+					],
+					"path": [
+						"wall",
+						"post",
+						"{{Post ID}}",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD_Birthday_Technology_BIO",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "Token {{Token_Login}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"first_name\": null,\r\n  \"last_name\": null,\r\n  \"username\": \"Роман\",\r\n  \"bio\": \"Test_HW_postman\",\r\n  \"email\": \"romakotenko17@gmail.com\",\r\n  \"phone\": null,\r\n  \"gender\": \"male\",\r\n  \"technology\": [ \r\n  {\r\n    \"id\": 3,\r\n    \"name\": \"Python\"\r\n  }\r\n],\r\n  \"birthday\": \"1996-05-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_URL_1}}/profile/",
+					"host": [
+						"{{Base_URL_1}}"
+					],
+					"path": [
+						"profile",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JOIN_THE_TEAM_QA",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "Token {{Token_Login}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": null,\r\n  \"team\": 32,\r\n  \"create_date\": \"null\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_URL_1}}/team/invitation/answer/",
+					"host": [
+						"{{Base_URL_1}}"
+					],
+					"path": [
+						"team",
+						"invitation",
+						"answer",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo4NTgsImV4cCI6MTY1NTg4MDY3Miwic3ViIjoiYWNjZXNzIn0.GsCYFUOQAvhp6w8V0NoMrzSS0DhoDa1fUv6SFE_1pxU",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "authorization",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
